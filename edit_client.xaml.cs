@@ -23,5 +23,10 @@ namespace ExampleBase
         {
             InitializeComponent();
         }
+
+        public void Edit()
+        {
+
+        }
     }
 }
