@@ -42,7 +42,8 @@ namespace ExampleBase
 
         private void cbAddClient_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            NameContrComboBox();
+            //NameContrComboBox();
+
         }
 
         void NameContrComboBox()
