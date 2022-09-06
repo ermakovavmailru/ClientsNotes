@@ -5,15 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExampleBase"
         mc:Ignorable="d"
-        Title="edit_client" Height="400" Width="360">
-    <DockPanel Margin="0,0,0,300">
-        <Label DockPanel.Dock="Left" Content="Введите имя" Height="30" Margin="10" Background="Gray" />
-        <ComboBox DockPanel.Dock="Right" Margin="20"  Width="220" Height="30"/>
+        Title="edit_client" Height="500" Width="340">
+    <DockPanel>
+        <StatusBar Height="450" Width="330">
+            <GroupBox Margin="0,20,0,0" DockPanel.Dock="Left" Height="380" Width="300">
+                <StackPanel Margin="0,0,0,0" >
+                    <Label HorizontalAlignment="Center" >Выберите имя</Label>
+                    <ComboBox Name="cbAddClient" SelectionChanged="cbAddClient_SelectionChanged_1" ></ComboBox>
+                    <Label HorizontalAlignment="Center" >Контрагент</Label>
+                    <TextBox Name="tbAddClient"></TextBox>
+                    <Label HorizontalAlignment="Center" >Телефон</Label>
+                    <TextBox Name="tbAddPhone"></TextBox>
+                    <Label HorizontalAlignment="Center" >Телефон 2</Label>
+                    <TextBox Name="tbAddPhone2"></TextBox>
+                    <Label HorizontalAlignment="Center" >email</Label>
+                    <TextBox Name="tbAddEmail"></TextBox>
+                    <Label HorizontalAlignment="Center" >коментарии</Label>
+                    <TextBox  Name="tbAddComent"></TextBox>
+                    <Button Margin="10" Content="Отмена"  Width="189" Click="Button_Click_1"></Button>
+                    <Button Margin="10" Content="Сохранить"  Width="189"></Button>
 
+
+
+
+                </StackPanel>
+            </GroupBox>
+
+        </StatusBar>
     </DockPanel>
-
-
-
-
-
 </Window>

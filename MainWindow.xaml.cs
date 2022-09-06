@@ -34,6 +34,24 @@ namespace ExampleBase
             ShowReminder();
 
         }
+        public void ShowReminder()
+        {
+            SqlCommand sql = new SqlCommand(All_Query.query_reminder, conn);
+            reader = sql.ExecuteReader();
+            string newReminders = "";
+            while (reader.Read())
+            {
+                newReminders += "\n" + reader["text"];
+            }
+            reader.Close();
+
+            if (newReminders != "")
+            {
+                messageInfo.Text = newReminders;
+            }
+
+            //messageInfo.Text += "\nДополнение";      
+        }
 
         string Svetlana_Base = Connect.Svetlana_Base;
         SqlConnection conn;
@@ -127,14 +145,12 @@ namespace ExampleBase
             comm.ExecuteNonQuery();
             addNotes.Text = ""; 
         }
-        public void ShowReminder()
+        private void EditClient(object sender, RoutedEventArgs e)
         {
-
+            edit_client edit_ = new edit_client();
+            edit_.ShowDialog();
         }
 
-        private void Edit_Client(object sender, RoutedEventArgs e)
-        {
-
-        }
+      
     }
 }

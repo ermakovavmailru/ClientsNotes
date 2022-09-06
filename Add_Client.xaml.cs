@@ -32,7 +32,7 @@ namespace ExampleBase
         private void Button_Save(object sender, RoutedEventArgs e)
         {
             string name_contr = tbAddClient.Text;
-            long phone = Convert.ToInt64(tbAddPhone.Text); ;
+            long phone = Convert.ToInt64(tbAddPhone.Text); 
             long phone2 = Convert.ToInt64(tbAddPhone2.Text);
             string email = tbAddEmail.Text;
             string coment = rtbAddComent.ToString();

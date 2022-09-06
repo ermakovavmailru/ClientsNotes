@@ -14,20 +14,20 @@ namespace ExampleBase
         {
             public static string Svetlana_Base = ConfigurationManager.ConnectionStrings["Svetlana_base"].ConnectionString;
         }
-        public class Countragents
+        public  class Countragents
         {
-            public int id { get; set; }
-            public string name_contr { get; set; }
-            public long phone { get; set; }
-            public long phone_2 { get; set; }
-            public string email { get; set; }
-            public string coment { get; set; }
+            public  int id { get; set; }
+            public  string name_contr { get; set; }
+            public  long phone { get; set; }
+            public  long phone_2 { get; set; }
+            public  string email { get; set; }
+            public  string coment { get; set; }
 
 
 
             public override string ToString()
             {
-                return $" {name_contr} ({phone}) ({phone_2}) {email} {coment} ";
+                return $" {name_contr}  ";
 
             }
         }

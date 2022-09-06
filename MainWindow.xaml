@@ -14,7 +14,9 @@
             </MenuItem>
             <MenuItem Header="Правка">
                 <MenuItem Header="Расширенный поиск"></MenuItem>
-                <MenuItem Header ="Редактирование клиента"  ></MenuItem>
+                <MenuItem Header ="Редактирование клиента"  >
+
+                </MenuItem>
 
 
             </MenuItem>
@@ -53,28 +55,36 @@
                 <Button Name="reminder" Click="reminder_Click">Добавить</Button>
             </StackPanel>            
         </GroupBox>
-        <GridSplitter></GridSplitter>
+        <GridSplitter DockPanel.Dock="Right"></GridSplitter>
         <GroupBox DockPanel.Dock="Right" Width="180">
             <StackPanel>
                 <Label Name="lblDateReminder">Напоминания на </Label>
                 <TextBlock Name="messageInfo" Text="Напоминаний нет..." FontStyle="Italic" Foreground="#FF9E9E9E"></TextBlock>
             </StackPanel>
         </GroupBox>
-        <GridSplitter></GridSplitter>
-        <TabControl DockPanel.Dock="Top" Height="290" Width="424">
+        <GridSplitter DockPanel.Dock="Left"></GridSplitter>
+        <GroupBox DockPanel.Dock="Bottom">
+            <DockPanel>
+                <TextBox DockPanel.Dock="Bottom" Name="addNotes" Height="100" ></TextBox>
+                <Label DockPanel.Dock="Bottom" Height="25">Заметки</Label>
+                <Button Content="Добавить клиента" Margin="7" Padding="7" Click="AddClient"/>
+                <Button  Content="Добавить заметку" Margin="7" Padding="7" Click="AddNotes" />
+                <Button Content="Ред.клеинт" Margin="7" Padding="7" Click="EditClient" />
+                <TextBlock></TextBlock>
+            </DockPanel>
+        </GroupBox>
+        <TabControl>
             <TabItem Header="Клиент">
-                <DataGrid Name="dtGrid" AutoGenerateColumns="True" Margin="0,0,0,0"></DataGrid>
+                <DataGrid Name="dtGrid" AutoGenerateColumns="True"  Margin="0,0,0,0" ></DataGrid>
             </TabItem>
             <TabItem Header="Заметки">
                 <TextBox></TextBox>
             </TabItem>
             <TabItem  Header="Товары">
-                
+
             </TabItem>
-        </TabControl>        
-        <TextBox DockPanel.Dock="Bottom" Name="addNotes" Height="100" ></TextBox>
-        <Label DockPanel.Dock="Bottom" Height="25">Заметки</Label>
-        <Button Content="Добавить клиента" Width="140" Height="31" Click="AddClient"/>
-        <Button  Content="Добавить заметку" Width="140" Height="31" Click="AddNotes" />
+        </TabControl>
+       
+        
     </DockPanel>
 </Window>
