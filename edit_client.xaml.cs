@@ -18,9 +18,6 @@ using static ExampleBase.All_Class;
 
 namespace ExampleBase
 {
-    /// <summary>
-    /// Логика взаимодействия для edit_client.xaml
-    /// </summary>
     public partial class edit_client : Window
     {
         public edit_client()
@@ -56,24 +53,29 @@ namespace ExampleBase
                 {
                     name_contr = reader["name_contr"].ToString()
                 };
-
-                cbAddClient.Items.Add(countragents);
-                /*
-                string name_contr = tbAddClient.Text;
-                long phone = Convert.ToInt64(tbAddPhone.Text); // !!!!!!!
-                long phone_2 = Convert.ToInt64(tbAddPhone2.Text); // !!!!!!!
-                string email = tbAddEmail.Text;
-                string coment = tbAddComent.Text;
-                string edit_client = $"update contragents set name_contr='{name_contr}', phone={phone}, phone_2={phone_2}, " +
-                    $" email='{email}', coment='{coment}' where name_contr='{countragents.name_contr}' ";
-                MessageBox.Show(edit_client);
-                SqlCommand command = new SqlCommand(edit_client, conn);
-                command.ExecuteNonQuery();
-                */
-               
-            } 
+                cbAddClient.Items.Add(countragents);               
+            }
             reader.Close();
-            
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            if (cbAddClient.Text != "")
+            {
+
+            }
         }
     }
 }
+/*
+               string name_contr = tbAddClient.Text;
+               long phone = Convert.ToInt64(tbAddPhone.Text); // !!!!!!!
+               long phone_2 = Convert.ToInt64(tbAddPhone2.Text); // !!!!!!!
+               string email = tbAddEmail.Text;
+               string coment = tbAddComent.Text;
+               string edit_client = $"update contragents set name_contr='{name_contr}', phone={phone}, phone_2={phone_2}, " +
+                   $" email='{email}', coment='{coment}' where name_contr='{countragents.name_contr}' ";
+               MessageBox.Show(edit_client);
+               SqlCommand command = new SqlCommand(edit_client, conn);
+               command.ExecuteNonQuery();
+               */

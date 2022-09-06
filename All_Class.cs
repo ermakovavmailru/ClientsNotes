@@ -8,7 +8,7 @@ using System.Windows.Media;
 
 namespace ExampleBase
 {
-    internal class All_Class
+    public partial class All_Class
     {
         public class Connect
         {
@@ -18,12 +18,11 @@ namespace ExampleBase
         {
             public  int id { get; set; }
             public  string name_contr { get; set; }
-            public  long phone { get; set; }
-            public  long phone_2 { get; set; }
+            public  string phone { get; set; }
+            public  string phone_2 { get; set; }
             public  string email { get; set; }
             public  string coment { get; set; }
-
-
+            public int id_notes { get; set; }
 
             public override string ToString()
             {
@@ -31,49 +30,33 @@ namespace ExampleBase
 
             }
         }
-        public class Items
-        {
-            public int id { get; set; }
-            public string name_item { get; set; }
-            public int size { get; set; }
-            public double price { get; set; }
-
-            public override string ToString()
-            {
-                return $" {name_item} ({size}) ({price}) ";
-
-            }
-
-        }
         public class Deals
         {
             public int id { get; set; }
             public int id_contr { get; set; }
-            public int id_item { get; set; }
+            public string name_item { get; set; }
+            public double price { get; set; }
             public string account_number { get; set; }
-            public int count { get; set; }
-            public double sum { get; set; }
-            public int day { get; set; }
-            public int month { get; set; }
-            public int year { get; set; }
+            public int count { get; set; }      
+            public string date { get; set; }
             public string status { get; set; }
 
             public override string ToString()
             {
-                return $" ({id_contr}) ({id_item}) {account_number} ({sum}) ({day}) ({month}) ({year}) {status} ";
+                return $" ({id_contr}) {name_item} ({price}) {account_number} ({count}) {date} {status}  ";
 
             }
         }
-        public class Reminder
+        public static class Reminder
         {
-          public int id { get; set; }
-          public string text { get; set; }
-          public string time { get; set; }
-          public int date { get; set; }
+          public static int id { get; set; }
+          public static string text { get; set; }
+          public static string time { get; set; }
+          public static string date { get; set; }
 
-            public override string ToString()
+            public  static string ToString()
             {
-                return $" ( {text}  ({time}) ({date}) ) ";
+                return $" ( {text}  {time} {date} ) ";
 
             }
 

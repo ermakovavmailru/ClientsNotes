@@ -19,16 +19,11 @@
                     <Label HorizontalAlignment="Center" >email</Label>
                     <TextBox Name="tbAddEmail"></TextBox>
                     <Label HorizontalAlignment="Center" >коментарии</Label>
-                    <TextBox  Name="rtbAddComent"></TextBox>
+                    <RichTextBox  Name="rtbAddComent"></RichTextBox>
                     <Button Content="Отмена" Click="Button_Click"></Button>
                     <Button Content="Сохранить" Click="Button_Save"></Button>
-
-
-
-
                 </StackPanel>
             </GroupBox>
-            
         </StatusBar>
     </DockPanel>
 </Window>

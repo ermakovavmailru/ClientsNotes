@@ -22,8 +22,8 @@
                     <TextBox Name="tbAddEmail"></TextBox>
                     <Label HorizontalAlignment="Center" >коментарии</Label>
                     <TextBox  Name="tbAddComent"></TextBox>
-                    <Button Margin="10" Content="Отмена"  Width="189" Click="Button_Click_1"></Button>
-                    <Button Margin="10" Content="Сохранить"  Width="189"></Button>
+                    <Button Margin="10"  Content="Отмена"  Width="189" Click="Button_Click_1"></Button>
+                    <Button Margin="10" Name="btnSave"  Content="Сохранить"  Width="189" Click="btnSave_Click"></Button>
 
 
 

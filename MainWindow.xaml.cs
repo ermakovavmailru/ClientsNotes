@@ -41,11 +41,12 @@ namespace ExampleBase
             string newReminders = "";
             while (reader.Read())
             {
+                if(Reminder.date == DateTime.Now.ToShortDateString() )
                 newReminders += "\n" + reader["text"];
             }
             reader.Close();
 
-            if (newReminders != "")
+            if (newReminders != ""   )
             {
                 messageInfo.Text = newReminders;
             }
@@ -126,7 +127,7 @@ namespace ExampleBase
             string time = cbTime.Text;
             string date = cbDate.ToString();
 
-            string query_reminder = $"insert into reminder (text, time, date) values ('{reminder}', '{time}', '{date}')";
+            string query_reminder = $"insert into reminder (text, time, date) values (N'{reminder}', '{time}', '{date}')";
             MessageBox.Show(query_reminder);
             SqlCommand comm = new SqlCommand(query_reminder, conn);
             comm.ExecuteNonQuery();

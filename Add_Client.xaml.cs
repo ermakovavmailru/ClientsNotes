@@ -32,10 +32,11 @@ namespace ExampleBase
         private void Button_Save(object sender, RoutedEventArgs e)
         {
             string name_contr = tbAddClient.Text;
-            long phone = Convert.ToInt64(tbAddPhone.Text); 
-            long phone2 = Convert.ToInt64(tbAddPhone2.Text);
+            string phone = tbAddPhone.Text; 
+            string phone2 = tbAddPhone2.Text;
             string email = tbAddEmail.Text;
             string coment = rtbAddComent.ToString();
+
             string queryAddClient = $"insert into contragents (name_contr, phone, phone_2, email, coment) values (N'{name_contr}',{phone}, {phone2}, N'{email}', N'{coment}')";
             MessageBox.Show(queryAddClient);
             SqlCommand command = new SqlCommand(queryAddClient, conn);
